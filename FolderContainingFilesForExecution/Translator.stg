@@ -1,0 +1,86 @@
+file(functions, main) ::= <<
+import cTurtle
+import math
+ 
+def rectangle(turtle, length, width):
+        turtle.forward(length)
+        turtle.right(90)
+        turtle.forward(width)
+        turtle.right(90)
+        turtle.forward(length)
+        turtle.right(90)
+        turtle.forward(width)
+        
+
+def polygon(turtle, sides, size=100):
+        angle=360/sides
+        for i in range(sides):
+                turtle.forward(size)
+                turtle.right(angle)
+
+
+
+
+<functions; separator="\n">
+<main>
+
+main()
+>>
+
+main(statements) ::= <<
+def main():
+	<statements; separator="\n">
+>>
+
+function(name, statements) ::= <<
+def draw<name>(turtle):
+	turtle.penup()
+	turtle.tracer(True)
+	<statements; separator="\n">
+	turtle.hideturtle()
+>>
+	
+statement(blank) ::= "<blank>"
+MoreStatements(functions, statements) ::= <<
+<functions; separator="\n">
+<statements; separator="\n">
+>>
+
+
+FillColor(color) ::= <<turtle.fillcolor(<color>)>>
+LineColor(color) ::= <<turtle.pencolor(<color>)>>
+LineWidth(size) ::= "turtle.width(<size>)"
+StartingPos(x,y) ::= <<
+turtle.goto(<x>, <y>) 
+>>
+DrawingSpeedDigit(speed) ::= "turtle.speed(<speed>)"
+DrawingSpeedInstantaneous() ::= "turtle.tracer(False)"
+
+Radius(n) ::= "<n>"
+PolygonSideLength(n) ::= "<n>"
+RectangleSize(l,w) ::= "<l> <w>"
+Number(n) ::= "<n>"
+
+
+NumColorInput(r, g, b) ::= "((<r>/255), (<g>/255), (<b>/255))"
+StringColorInput(string) ::= "<\u0022><string><\u0022>"
+
+circle(radius) ::= "turtle.circle(<radius>)"
+
+rectangle(length, width) ::= "rectangle(turtle, <length>, <width>)"
+
+star(radius) ::= "..."
+
+line(x, y) ::= "turtle.goto(<x>, <y>)"
+
+lines(line) ::= <<
+<line; separator = "\n">
+>>
+
+polygon(sides, length) ::= "polygon(turtle, <sides>, <length>)"
+
+drawStatement(turtle) ::= "draw<turtle>(<turtle>)"
+
+deleteStatement(turtle) ::= "<turtle>.clear()"
+
+createStatement(turtle) ::= "<turtle>=cTurtle.Turtle()"

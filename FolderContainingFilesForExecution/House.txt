@@ -1,0 +1,18 @@
+NightSky -> fill-color = rgb(0, 0, 100), drawing-speed = instantaneous, starting-position = (-1000, 1000), 2000 x 1150, rectangle.
+draw NightSky.
+House -> fill-color = rgb(101, 1, 42), line-color = pink, starting-position = (-200, 150), 400 x 300, rectangle.
+draw House.
+Window1 -> starting-position = (-100, 100), fill-color = orange, side-length = 17, 12-gon.
+draw Window1.
+Window2 -> starting-position = (100, 100), fill-color = orange, side-length = 17, 12-gon.
+draw Window2.
+Roof -> starting-position = (-250, 150), fill-color = rgb(135, 52, 99), line through [(250, 150), (0,200), (-250, 150)].
+draw Roof.
+Door -> starting-position = (0, -100), drawing-speed = 5, 35 x 50, fill-color = teal, rectangle.
+draw Door.
+DoorHandle -> starting-position = (25, -125), fill-color = red, 10 x 10, rectangle.
+draw DoorHandle.
+Ground -> starting-position = (-1000, -150), fill-color = rgb(0, 0, 0), 2000 x 10, rectangle.
+draw Ground.
+Moon -> starting-position = (-270, 200), fill-color = yellow, radius = 50, circle.
+draw Moon.
