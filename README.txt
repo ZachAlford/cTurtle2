@@ -13,7 +13,7 @@ Instructions to compile and use cTurtle2
 1. Write a file in our language
 2. Optional step to compile: (within FolderContainingFilesForExecution, the files are already compiled, but if you wish to edit the Java files, you must recompile) run at command line "javac *.java" (if necessary, first install ANTLRWorks 2 software above for the required modules)
 3. (within FolderContainingFilesForExecution) run at command line "java Translator < inputfile.txt > outfile.py"
-4. run outfile.py (you must have the cTurtle module installed (see https://www.cs.ucsb.edu/~pconrad/cs8/topics/cTurtle/))
+4. run outfile.py (you must have the both Python ( see https://www.python.org ) and the cTurtle module installed (see https://www.cs.ucsb.edu/~pconrad/cs8/topics/cTurtle/ ) )
 5. Watch the drawing 
 
 
